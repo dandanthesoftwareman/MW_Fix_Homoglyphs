@@ -1,0 +1,17 @@
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\bin\Debug\net6.0\Fix_Homoglyphs.exe
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\bin\Debug\net6.0\Fix_Homoglyphs.deps.json
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\bin\Debug\net6.0\Fix_Homoglyphs.runtimeconfig.json
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\bin\Debug\net6.0\Fix_Homoglyphs.dll
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\bin\Debug\net6.0\Fix_Homoglyphs.pdb
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\obj\Debug\net6.0\Fix_Homoglyphs.csproj.AssemblyReference.cache
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\obj\Debug\net6.0\Fix_Homoglyphs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\obj\Debug\net6.0\Fix_Homoglyphs.AssemblyInfoInputs.cache
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\obj\Debug\net6.0\Fix_Homoglyphs.AssemblyInfo.cs
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\obj\Debug\net6.0\Fix_Homoglyphs.csproj.CoreCompileInputs.cache
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\obj\Debug\net6.0\Fix_Homoglyphs.dll
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\obj\Debug\net6.0\refint\Fix_Homoglyphs.dll
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\obj\Debug\net6.0\Fix_Homoglyphs.pdb
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\obj\Debug\net6.0\Fix_Homoglyphs.genruntimeconfig.cache
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\obj\Debug\net6.0\ref\Fix_Homoglyphs.dll
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\obj\Debug\net6.0\Fix_Homoglyphs.Properties.Resources.resources
+C:\Users\17346\Desktop\Misc Projects\Fix_Homoglyphs\Fix_Homoglyphs\obj\Debug\net6.0\Fix_Homoglyphs.csproj.GenerateResource.cache

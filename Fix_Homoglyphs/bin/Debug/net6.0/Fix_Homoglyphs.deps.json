@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Fix_Homoglyphs/1.0.0": {
+        "runtime": {
+          "Fix_Homoglyphs.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Fix_Homoglyphs/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
