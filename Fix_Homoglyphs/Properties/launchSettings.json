@@ -1,8 +1,7 @@
 {
   "profiles": {
     "Fix_Homoglyphs": {
-      "commandName": "Project",
-      "commandLineArgs": "\"C:\\Users\\17346\\Desktop\\New folder\\Folder\\names.txt\""
+      "commandName": "Project"
     }
   }
 }

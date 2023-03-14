@@ -67,47 +67,72 @@ Dictionary<char, char> homoglyphs = new Dictionary<char, char>()
     ['Ø'] = '0'
 };
 
-//Console.Write("Please enter a filepath, and optinally a new file name spearated by a space: ");
-
-string filePathInput = GetFilePath(args[0]);
-string inputFileName = Path.GetFileName(filePathInput).Replace(".txt", "");
-string baseFilePath = Path.GetDirectoryName(filePathInput);
-string filePathOutput;
-
-if (args.ElementAtOrDefault(1) == null)
-{
-    filePathOutput = @$"{baseFilePath}\{inputFileName}_Formatted.txt";
-}
-else
-{
-    filePathOutput = @$"{baseFilePath}\{args[1]}.txt";
-}
-
-var lines = RemoveHomoglyphs(filePathInput, homoglyphs);
+List<string> programArgs = CheckArgs(args);
+string filePathOutput = CreateFilePathOutput(programArgs);
+var lines = RemoveHomoglyphs(programArgs[0], homoglyphs);
 WriteFormattedFile(filePathOutput, lines);
 
-static string GetFilePath(string path)
+static List<string> CheckArgs(string[] args)
 {
-    string filePath = path;
-    while (true)
+    List<string> values = new List<string>();
+    char[] nonValid = { '<', '>', '\\', '%', '#', '&', '{', '}', '*', '?', '/', ' ', '$', '!', '\'', '"', ':', '@', '+', '|', '`', '=' };
+    if(args.Length == 0)
     {
-        filePath = filePath.Replace("\"", "");
-        if (string.IsNullOrEmpty(filePath))
+        Console.WriteLine("No filepath has been provided");
+        System.Environment.Exit(1);
+        return null;
+    }
+    else if(args.Length == 1)
+    {
+        ValidateFilePath(args[0]);
+        values.Add(args[0]);
+        return values;
+    }
+    else if(args.Length == 2)
+    {
+        ValidateFilePath(args[0]);
+        values.Add(args[0]);
+        foreach(char c in args[1])
         {
-            Console.Write("Filepath cannot be empty, please enter a valid filepath: ");
-        }
-        else
-        {
-            try
+            if (nonValid.Contains(c))
             {
-                StreamReader reader = new StreamReader(filePath);
-                break;
-            }
-            catch
-            {
-                Console.Write("File not found, please enter a valid filepath: ");
+                Console.WriteLine($"File name contains invalid character \"{c}\"");
+                System.Environment.Exit(1);
             }
         }
+        values.Add(args[1]);
+        return values;
+    }
+    else
+    {
+        Console.WriteLine("Too many arguments given");
+        System.Environment.Exit(1);
+        return null;
+    }
+}
+static string ValidateFilePath(string path)
+{
+    if (File.Exists(path))
+    {
+        return path;
+    }
+    else
+    {
+        Console.WriteLine("Filepath is not valid");
+        System.Environment.Exit(1);
+        return null;
+    }
+}
+static string CreateFilePathOutput(List<string> _args)
+{
+    string filePath;
+    if (_args.Count() == 1)
+    {
+        filePath = @$"{Path.GetDirectoryName(_args[0])}\{Path.GetFileNameWithoutExtension(_args[0])}_homoglpyhs_removed.txt";
+    }
+    else
+    {
+        filePath = @$"{Path.GetDirectoryName(_args[0])}\{_args[1]}.txt";
     }
     return filePath;
 }
