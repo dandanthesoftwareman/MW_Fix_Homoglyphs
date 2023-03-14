@@ -75,7 +75,6 @@ WriteFormattedFile(filePathOutput, lines);
 static List<string> CheckArgs(string[] args)
 {
     List<string> values = new List<string>();
-    char[] nonValid = { '<', '>', '\\', '%', '#', '&', '{', '}', '*', '?', '/', ' ', '$', '!', '\'', '"', ':', '@', '+', '|', '`', '=' };
     if(args.Length == 0)
     {
         Console.WriteLine("No filepath has been provided");
@@ -91,15 +90,8 @@ static List<string> CheckArgs(string[] args)
     else if(args.Length == 2)
     {
         ValidateFilePath(args[0]);
+        ValidateFileName(args[1]);
         values.Add(args[0]);
-        foreach(char c in args[1])
-        {
-            if (nonValid.Contains(c))
-            {
-                Console.WriteLine($"File name contains invalid character \"{c}\"");
-                System.Environment.Exit(1);
-            }
-        }
         values.Add(args[1]);
         return values;
     }
@@ -122,6 +114,19 @@ static string ValidateFilePath(string path)
         System.Environment.Exit(1);
         return null;
     }
+}
+static string ValidateFileName(string fileName)
+{
+    char[] nonValid = { '<', '>', '\\', '%', '#', '&', '{', '}', '*', '?', '/', ' ', '$', '!', '\'', '"', ':', '@', '+', '|', '`', '=' };
+    foreach (char c in fileName)
+    {
+        if (nonValid.Contains(c))
+        {
+            Console.WriteLine($"File name contains invalid character \"{c}\"");
+            System.Environment.Exit(1);
+        }
+    }
+    return fileName;
 }
 static string CreateFilePathOutput(List<string> _args)
 {
